@@ -61,7 +61,7 @@ To deploy the Flask application for making predictions, follow these steps:
 python app.py
 ```
 
-The Flask app will be hosted at `http://localhost:8000`.
+The Flask app will be hosted at `http://localhost:1000`.
 
 ## Making Predictions
 
