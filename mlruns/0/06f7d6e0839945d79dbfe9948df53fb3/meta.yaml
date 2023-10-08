@@ -1,0 +1,15 @@
+artifact_uri: file:///Users/shamsulhaq/Desktop/github_tutorials/MLflow-model-deployment/mlruns/0/06f7d6e0839945d79dbfe9948df53fb3/artifacts
+end_time: 1696785396808
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 06f7d6e0839945d79dbfe9948df53fb3
+run_name: sedate-lynx-314
+run_uuid: 06f7d6e0839945d79dbfe9948df53fb3
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1696785393988
+status: 3
+tags: []
+user_id: shamsulhaq
