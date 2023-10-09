@@ -1,5 +1,3 @@
-Here's the modified README file with instructions for building and deploying the Flask application using Docker:
-
 # MLflow and Flask Project
 
 This repository showcases the integration of MLflow for model training and logging, Flask for deploying a web service, and making predictions using the trained model.
