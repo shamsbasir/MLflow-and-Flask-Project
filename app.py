@@ -3,10 +3,20 @@ from flask import Flask, request, jsonify  # Import Flask for web app, request f
 import pandas as pd  # Import pandas for data manipulation
 import mlflow.pyfunc  # Import mlflow.pyfunc for loading MLflow models
 
-# Load the model from MLflow
-model_uri = "mlruns/0/4aa5881f58204ad380e59334170adc63/artifacts/model"
+# Import necessary libraries
+import mlflow
 
-loaded_model = mlflow.pyfunc.load_model(model_uri)  # Load the MLflow model using mlflow.pyfunc.load_model()
+# Get the MLflow tracking URI
+mlflow_tracking_uri = mlflow.get_tracking_uri()
+
+# Use the tracking URI to build the model URI
+latest_run = mlflow.search_runs(order_by=["start_time desc"]).iloc[0]
+model_uri = f"{mlflow_tracking_uri}/0/{latest_run.run_id}/artifacts/model"
+
+# Load the MLflow model using mlflow.pyfunc.load_model()
+loaded_model = mlflow.pyfunc.load_model(model_uri)
+
+# Now you can use `loaded_model` to make predictions or perform other operations with the loaded model.
 
 app = Flask(__name__)  # Initialize a Flask application
 
